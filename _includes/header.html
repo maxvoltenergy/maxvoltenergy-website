@@ -26,6 +26,8 @@
   </div>
 </div>
 <!-- Topbar End -->
+
+
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
   <a href="/" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
@@ -37,10 +39,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto p-4 p-lg-0">
-      <a href="/" class="nav-item nav-link active">Home</a>
+      <a href="/" class="nav-item nav-link {% if page.currentpage == 'home' %}active{% endif %}">Home</a>
 
       <div class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
+        <a href="#" class="nav-link dropdown-toggle {% if page.currentpage == 'about' %}active{% endif %}" data-bs-toggle="dropdown">About Us</a>
         <div class="dropdown-menu bg-light m-0">
           <a href="/about-us/" class="dropdown-item">About MaxVolt</a>
           <a href="/about-us/our-catalog/" class="dropdown-item">Our Catalog</a>
