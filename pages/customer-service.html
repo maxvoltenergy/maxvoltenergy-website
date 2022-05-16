@@ -1,16 +1,13 @@
 ---
 layout: page
-title:  customer service
+title: Customer Service
 subtitle:
 description:
-permalink: /support/customer-service/
+permalink: /support/customer-service
 currentpage: support
 sitemap:
-  priority: 0.9
+priority: 0.9
 ---
-
-
-
 <!-- Page Header Start -->
 <div class="container-fluid page-header py-5 mb-5">
   <div class="container py-5">
@@ -18,10 +15,77 @@ sitemap:
     <nav aria-label="breadcrumb animated slideInDown">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-        <li class="breadcrumb-item"><a class="text-white" href="#">support</a></li>
 
+        <li class="breadcrumb-item text-white active" aria-current="page">Support</li>
       </ol>
     </nav>
   </div>
 </div>
 <!-- Page Header End -->
+
+
+<!-- Contact Start -->
+<div class="container-fluid bg-light overflow-hidden px-lg-0" style="margin: 6rem 0;">
+  <div class="container contact px-lg-0">
+    <div class="row g-0 mx-lg-0">
+      <div class="col-lg-6 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
+        <div class="p-lg-5 ps-lg-0">
+          <h6 class="text-primary">Customer Service</h6>
+          <h1 class="mb-4">Feel Free To Get Customer Service</h1>
+
+          <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" id="Contact">
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                  <label for="name">Your Name</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                  <label for="email">Your Email</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                  <label for="subject">Mention Your Subject</label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="mobile" name="mobile" placeholder="mobile">
+                  <label for="subject">Your Mobile Number</label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-floating">
+
+                  <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px"></textarea>
+
+
+                  <label for="message">Your Query</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <div data-netlify-recaptcha="true"></div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Contact End -->
