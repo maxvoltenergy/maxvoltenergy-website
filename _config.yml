@@ -27,6 +27,8 @@ compress_html:
 
 rss: true # RSS feed icon on or off
 
+permalink: /:slugified_categories/:year/:month/:day/:title/
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -66,7 +68,7 @@ autopages:
     silent: false
     slugify:
       mode: 'default'   # :cat is slugified. Modes: default, raw, pretty, ascii, latin
-      case: false       # Whether to replace all uppercase letters with their lowercase counterparts
+      case: true       # Whether to replace all uppercase letters with their lowercase counterparts
       
 # Tag pages, omit to disable
   tags:
@@ -77,20 +79,4 @@ autopages:
     silent: false
     slugify:
       mode: 'default'   # :tag is slugified.
-      case: false
-      
-# Collection pages, omit to disable
-  collections:
-    enabled: false
-    layouts: 
-      - 'collection.html'
-    title: 'Posts in collection :coll' # :coll is replaced by the collection name
-    permalink: '/collection/:coll'
-    silent: false
-    slugify:
-      mode: 'default'   # :coll is slugified.
-      case: false 
-      
-collections:
-    authors:
-        output: true
+      case: true
