@@ -3,7 +3,7 @@ layout: post
 title: Happy Independence Day 2021!
 date: 2021-08-14T05:49:10.130Z
 categories:
-  - Update
+  - News
 tags:
   - Update
 author: shiv
