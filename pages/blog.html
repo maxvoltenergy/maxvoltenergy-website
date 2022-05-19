@@ -36,7 +36,10 @@ sitemap:
 		  <a class="mh-100" href="#">
             <img src="{{ post.image | relative_url }}" alt="{{post.title}}" class="img-responsive w-100"></a>
 			{% endif %}
-          <span class="hp-posts-cat">Awards</span>
+			
+          <span class="hp-posts-cat">{% for category in post.categories %}
+												<a href="#" class="hover" rel="category">{{ post.category }}</a>
+											{% endfor %}</span>
           <h4 class="mt-3"><a href="{{post.url}}">{{post.title}}</a></h4>
           <p>{{post.excerpt | strip_html | truncatewords: "25"}}</p>
           <a href="{{post.url}}" class="read-more">Read more &gt;</a>
