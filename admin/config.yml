@@ -137,7 +137,6 @@ collections:
         - label: 'Detail'
           name: 'detail'
           widget: 'string'
-          widget: 'string'
         - label: 'Testimonial'
           name: 'body'
           widget: 'markdown'
