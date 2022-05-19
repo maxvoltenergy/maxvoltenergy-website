@@ -100,6 +100,17 @@ collections:
         - { label: 'Display Name', name: 'display_name', widget: 'string' }
         - { label: 'Position', name: 'position', widget: 'string' }
         - { label: 'Body', name: 'body', widget: 'markdown' }
+    - name: 'gallery'
+      label: 'Gallery'
+      folder: '_gallery/'
+      create: true
+      slug: '{{year}}-{{month}}-{{day}}-{{name}}'
+      editor:
+        preview: false
+      fields:
+        - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'gallery' }
+        - { label: 'Title', title: 'title', widget: 'string' }
+        - { label: 'Body', name: 'body', widget: 'markdown' }
     - name: 'testimonial'
       label: 'Testimonials'
       folder: '_testimonial/'
