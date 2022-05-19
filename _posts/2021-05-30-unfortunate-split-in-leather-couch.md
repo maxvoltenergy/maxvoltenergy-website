@@ -2,12 +2,12 @@
 layout: post
 title: Unfortunate Split In Leather Couch
 date: 2021-05-30T05:01:34.942Z
-tags:
-  - Update
 categories:
   - Update
+tags:
+  - Update
 author: shiv
-image: /assets/uploads/5fd1dd1bbbc5d_pdhxus9ynxh21__700.jpg
+image: /assets/uploads/img_7175.jpg
 ---
 घूमने की इच्छा इतनी जोर से हो रही है, की सोफे का छेद भी समंदर में वोट दिख रहा है। 😂😂
 
