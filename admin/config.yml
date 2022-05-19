@@ -108,9 +108,17 @@ collections:
       editor:
         preview: false
       fields:
-        - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'gallery' }
-        - { label: 'Title', name: 'title', widget: 'string' }
-        - { label: 'Body', name: 'body', widget: 'markdown' }
+        - label: 'Layout'
+          name: 'layout'
+          widget: 'hidden'
+          default: 'gallery'
+        - label: 'Title'
+          name: 'title'
+          widget: 'string'
+        - label: 'Image'
+          name: 'image'
+          widget: 'image'
+
     - name: 'testimonial'
       label: 'Testimonials'
       folder: '_testimonial/'
