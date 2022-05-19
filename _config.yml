@@ -80,3 +80,10 @@ autopages:
     slugify:
       mode: 'default'   # :tag is slugified.
       case: true
+collections:
+    testimonial:
+        output: false
+    author:
+        output: true
+    gallery:
+        output: true
