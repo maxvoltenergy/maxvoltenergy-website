@@ -109,7 +109,7 @@ collections:
         preview: false
       fields:
         - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'gallery' }
-        - { label: 'Title', title: 'title', widget: 'string' }
+        - { label: 'Title', name: 'title', widget: 'string' }
         - { label: 'Body', name: 'body', widget: 'markdown' }
     - name: 'testimonial'
       label: 'Testimonials'
