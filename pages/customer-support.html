@@ -34,6 +34,7 @@ priority: 0.9
             <thead>
             <tr>
             <th>Address</th>
+            <th>Phone</th>
             </tr>
             </thead>
             <tbody>
@@ -43,10 +44,10 @@ priority: 0.9
               <td>
             <address>
               <strong>{{service.title}}</strong><br>
-              {{service.address}}<br>
-              <abbr title="Phone">P:</abbr> {{service.phone}}
+              {{service.address}}
             </address>
               </td>
+              <td><abbr title="Phone">P:</abbr> {{service.phone}}</td>
             </tr>
             {% endfor %}
             </tbody>
