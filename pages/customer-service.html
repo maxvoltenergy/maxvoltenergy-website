@@ -30,10 +30,9 @@ priority: 0.9
         <h4 class="title-h4">Service centre Locations</h4>
 
         <div class="center-address">
-          <table id="center-table">
+          <table class="table table-bordered" id="center-table">
             <thead>
             <tr>
-            <th>Id</th>
             <th>Address</th>
             </tr>
             </thead>
@@ -41,7 +40,6 @@ priority: 0.9
 
             {% for service in site.service %}
             <tr>
-              <td></td>
               <td>
             <address>
               <strong>{{service.title}}</strong><br>
