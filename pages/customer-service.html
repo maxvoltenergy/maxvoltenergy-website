@@ -29,53 +29,14 @@ priority: 0.9
 
     <div class="row">
       <div class="col-md-4">
+        {% for service in site.service %}
         <address>
-          <strong>RAJASTHAN</strong><br>
-          Jodhpur<br>
-          <abbr title="Phone">P:</abbr> 0120 4291595
+          <strong>{{service.title}}</strong><br>
+          {{service.address}}<br>
+          <abbr title="Phone">P:</abbr> {{service.phone}}
         </address>
 
-        <address>
-          <strong>Orrisa</strong><br>
-          Bhubaneshwar<br>
-          <abbr title="Phone">P:</abbr> 0120 4291595
-        </address>
-
-        <address>
-          <strong>Madhya Pradesh</strong><br>
-          Betul<br>
-          <abbr title="Phone">P:</abbr> 0120 4291595
-        </address>
-
-        <address>
-          <strong>Bihar</strong><br>
-          Patna<br>
-          <abbr title="Phone">P:</abbr> 0120 4291595
-        </address>
-
-        <address>
-          <strong>West Bengal</strong><br>
-          Kolkata<br>
-          <abbr title="Phone">P:</abbr> 0120 4291595
-        </address>
-
-        <address>
-          <strong>Himachal Pradesh</strong><br>
-          Una<br>
-          <abbr title="Phone">P:</abbr> 0120 4291595
-        </address>
-
-        <address>
-          <strong>Karnataka</strong><br>
-          Bangalore<br>
-          <abbr title="Phone">P:</abbr> 0120 4291595
-        </address>
-
-        <address>
-          <strong>Andhra Pradesh</strong><br>
-          Hyderabad<br>
-          <abbr title="Phone">P:</abbr> 0120 4291595
-        </address>
+        {% endfor %}
 
       </div>
       <div class="col-md-8">
