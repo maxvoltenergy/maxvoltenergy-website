@@ -28,14 +28,16 @@ priority: 0.9
     <div class="row">
       <div class="col-md-4">
         <h4 class="title-h4">Service centre Locations</h4>
-        {% for service in site.service %}
-        <address>
-          <strong>{{service.title}}</strong><br>
-          {{service.address}}<br>
-          <abbr title="Phone">P:</abbr> {{service.phone}}
-        </address>
+        <div class="center-address">
+          {% for service in site.service %}
+          <address>
+            <strong>{{service.title}}</strong><br>
+            {{service.address}}<br>
+            <abbr title="Phone">P:</abbr> {{service.phone}}
+          </address>
 
-        {% endfor %}
+          {% endfor %}
+        </div>
 
       </div>
       <div class="col-md-8">
