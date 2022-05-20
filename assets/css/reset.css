@@ -1,3 +1,7 @@
 .top-logo{
    width: 70px;
 }
+.center-address {
+    max-height: 750px;
+    overflow-y: scroll;
+}
