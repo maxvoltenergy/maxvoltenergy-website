@@ -12,3 +12,6 @@
 #center-table_wrapper > div:first{
 padding-bottom: 20px;
 }
+button.btn.btn-lg.btn-primary {
+    display: none;
+}
