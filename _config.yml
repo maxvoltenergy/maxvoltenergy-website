@@ -84,6 +84,8 @@ collections:
     testimonial:
         output: false
     author:
-        output: true
+        output: false
     gallery:
-        output: true
+        output: false
+    service:
+        output: false
