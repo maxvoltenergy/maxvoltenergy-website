@@ -1,7 +1,6 @@
-<div class="gallery">
+
+<div id="nanoGallery3">
    {% for gallery in site.gallery limit:10 %}
-
-   <a href="{{gallery.thumb}}"><img src="{{gallery.image}}" alt="" title=""/></a>
+   <a href="{{gallery.thumb}}" data-ngthumb="{{gallery.image}}" data-ngdesc="Description1">Title Image1</a>
    {% endfor %}
-
 </div>

@@ -9,12 +9,16 @@
 <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
 <script src="/assets/lib/isotope/isotope.pkgd.min.js"></script>
 <script src="/assets/lib/lightbox/js/lightbox.min.js"></script>
-<script src="/assets/lib/simplelightbox/dist/simple-lightbox.js"></script>
+<script src="/assets/lib/nanogallery/dist/jquery.nanogallery2.js"></script>
 
 <!-- Template Javascript -->
 <script src="/assets/js/main.js"></script>
 
 <script>
-        var lightbox = new SimpleLightbox('.gallery a', {navText:    ['&lsaquo;','&rsaquo;']});
+    $(document).ready(function () {
+        $("#nanoGallery3").nanoGallery({
+            itemsBaseURL:'https://www.maxvoltenergy.com'
+        });
+    });
 
 </script>
