@@ -18,6 +18,40 @@
 {% endfor %}
 </div>
 
+
+
+
+
+
+{% assign numOfCols = 2 %}
+{% assign rowCount = 0 %}
+{% assign bootstrapColWidth = 12 / numOfCols %}
+
+
+{% for gallery in site.gallery %}
+
+{% assign remainder = forloop.index | modulo: 2 %}
+
+{% if remainder == 0%}
+
+  <div class="row">
+
+     {% endif %}
+
+     {% capture rowCount %}{{ rowCount | plus:1 }}{% endcapture %}
+
+   <div class="col-md-{{ bootstrapColWidth }}">
+      <div class="thumbnail">
+         <img src="user_file/<?php echo $row->foto; ?>">
+      </div>
+   </div>
+    {% if remainder == 0%} </div>
+
+    {% endif %}
+    {% endfor %}
+
+
+
 <style>.owl-carousel .item {
    height: 25rem;
    background: #fff;
