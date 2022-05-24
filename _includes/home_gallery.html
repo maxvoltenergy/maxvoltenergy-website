@@ -31,7 +31,7 @@
 
     {% increment rowCount %}
 
-   {% assign ModuleRes = rowCount | modulo: 4 %}
+   {% assign ModuleRes = rowCount/4 %}
 
    {{ ModuleRes }}
    {% if ModuleRes == 0 %}
