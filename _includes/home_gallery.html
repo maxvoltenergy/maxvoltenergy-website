@@ -2,19 +2,17 @@
 <div class="owl-carousel owl-theme">
 
    <div class="item">{% for gallery in site.gallery limit: 2 %}
-      <a data-fancybox="gallery" href="{{gallery.thumb}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.image}}" alt="{{gallery.title}}"></a>
+      <a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a>
    {% endfor %}
    </div>
    <div class="item">
    {% for gallery in site.gallery limit: 2 offset: continue %}
-      <a data-fancybox="gallery" href="{{gallery.thumb}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.image}}" alt="{{gallery.title}}"></a>
+      <a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a>
    {% endfor %}
    </div>
 
 
 </div>
-
-
 
 <style>.owl-carousel .item {
    height: 25rem;
