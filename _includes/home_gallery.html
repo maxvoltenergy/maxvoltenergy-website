@@ -2,10 +2,10 @@
 <div id="nanoGallery3">
 
 
-   {% for gallery in site.gallery limit: 2 %}
+   {% for gallery in site.gallery limit: 3 %}
    <a href="{{gallery.thumb}}" data-ngthumb="{{gallery.image}}" data-ngdesc="Description1">{{gallery.title}}</a>
    {% endfor %}
-   {% for gallery in site.gallery limit: 2 offset: continue %}
+   {% for gallery in site.gallery limit: 3 offset: continue %}
    <a href="{{gallery.thumb}}" data-ngthumb="{{gallery.image}}" data-ngdesc="Description1">{{gallery.title}}</a>
    {% endfor %}
 
