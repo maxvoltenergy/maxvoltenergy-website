@@ -1,33 +1,91 @@
 <div class="owl-carousel owl-theme">
    {% for gallery in site.gallery %}
-   {% assign remainder = forloop.index | modulo: 2 %}
-   {% if forloop.first == true %}
    <div class="item">
       <a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a>
    </div>
-   {% elsif remainder == 0 %}
-   <div class="item">
-      <a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a>
-      {% if forloop.last %}
-   </div>
-   {% endif %}
-   {% else %}
-   <a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a>
-</div>
-{% endif %}
 {% endfor %}
 </div>
 
 
 
-<style>.owl-carousel .item {
-   height: 25rem;
-   background: #fff;
-   text-align: center;
-}
+<style>
 
-.owl-carousel .item h4{
-   height: 10rem;
-   background: #4DC7A0;
-   margin: 1rem;
-}</style>
+   .owl-carousel {
+      position: relative;
+      width: 100%;
+      max-width: 80%;
+      margin: 20px auto;
+      padding: 10px 8%;
+      border: 2px solid Aqua;
+      background-color: transparent;
+      overflow: hidden;
+      box-sizing: content-box;
+   }
+   .owl-carousel:hover {
+      background-color: Aqua;
+   }
+   .owl-carousel .owl-stage-outer {
+      overflow: visible;
+   }
+   .owl-carousel .owl-stage-outer:hover {
+      background-color: AliceBlue;
+   }
+   .owl-carousel .owl-stage-outer:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      right: 10px;
+      height: 1px;
+      background-color: #ccc;
+   }
+
+   .owl-stage {
+      height: 300px;
+   }
+
+   .owl-item {
+      float: left;
+      position: relative;
+      height: calc(50% - 10px);
+      transition: opacity 1s ease;
+   }
+   .owl-item:not(.active) {
+      opacity: 0;
+   }
+   .owl-item:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      border: 2px solid Brown;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+   }
+   .owl-carousel:hover .owl-item:after {
+      opacity: 1;
+   }
+
+   .owl-item > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% + 40% * 2);
+      height: 100%;
+      opacity: 0.5;
+   }
+   .owl-item:nth-child(odd) > div {
+      top: 0;
+      background: LightGreen;
+   }
+   .owl-item:nth-child(even) > div {
+      top: calc(100% + 20px);
+      background-color: LightBlue;
+   }
+
+</style>

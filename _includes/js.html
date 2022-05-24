@@ -14,15 +14,39 @@
 <!-- Template Javascript -->
 <script src="/assets/js/main.js"></script>
 
-<script>jQuery('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:5,
-    items:4,
-    autoplay: true,
-    autoPlaySpeed: 3000,
-    autoPlayTimeout: 50000,
-    autoplayHoverPause: true
-
+<script>
+    jQuery(".owl-carousel").owlCarousel({
+    nav: true,
+    dots: false,
+    loop: false,
+    rewind: true,
+    // autoWidth: true,
+    stagePadding: 0,
+    margin: 4,
+    checkVisibility: true,
+    navElement: 'div',
+    responsive : {
+        0 : {
+            items: 1,
+            slideBy: 1
+        },
+        768 : {
+            items: 2,
+            slideBy: 2
+        },
+        1024 : {
+            items: 3,
+            slideBy: 3
+        },
+        1280 : {
+            items: 4,
+            slideBy: 4
+        },
+        1440 : {
+            items: 5,
+            slideBy: 1
+        }
+    }
 });
 
 jQuery('[data-fancybox]').fancybox({
