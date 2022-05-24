@@ -122,13 +122,13 @@ priority: 1.0
     <div class="container">
 	<div class="row">
 	<div class="col-md-4">
-        <h4>Recent Happenings</h4>
+        <h4 class="title-h4">Recent Happenings</h4>
         {% for post in site.posts limit:10 %}
         <a class="home-blog-update" href="{{post.url}}">{{post.title}}</a>
         {% endfor %}
     </div>
 	<div class="col-md-8">
-        <h4>Corporate Gallery</h4>
+        <h4 class="title-h4">Corporate Gallery</h4>
         {% include home_gallery.html %}
     </div>
 	</div>
