@@ -19,7 +19,7 @@
 
 {% assign numOfCols = 4 %}
 {% assign rowCount = 0 %}
-{% assign bootstrapColWidth = 12/numOfCols %}
+{% assign bootstrapColWidth = 3 %}
 
 <div class="row">
    {% for gallery in site.gallery %}
@@ -29,7 +29,7 @@
       </div>
    </div>
 
-    {{ increment rowCount }}
+    {% increment rowCount %}
 
    {% if rowCount | modulo: 2 == 0 %}
 </div><div class="row">
