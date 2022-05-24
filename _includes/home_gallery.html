@@ -3,9 +3,9 @@
    {% for gallery in site.gallery limit: 6 %}
    <div class="item">
       <a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a>
-   {% endfor %}
-   </div>
 
+   </div>
+   {% endfor %}
 </div>
 
 
