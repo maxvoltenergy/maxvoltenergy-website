@@ -3,12 +3,12 @@
 
 
    <div class="item">{% for gallery in site.gallery limit: 3 %}
-   <a href="{{gallery.thumb}}" data-ngthumb="{{gallery.image}}" data-ngdesc="Description1">{{gallery.title}}</a>
+      <a data-fancybox="gallery" href="{{gallery.thumb}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.image}}" alt="{{gallery.title}}"></a>
    {% endfor %}
    </div>
    <div class="item">
    {% for gallery in site.gallery limit: 3 offset: continue %}
-   <a href="{{gallery.thumb}}" data-ngthumb="{{gallery.image}}" data-ngdesc="Description1">{{gallery.title}}</a>
+      <a data-fancybox="gallery" href="{{gallery.thumb}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.image}}" alt="{{gallery.title}}"></a>
    {% endfor %}
    </div>
 

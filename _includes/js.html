@@ -23,4 +23,19 @@
     autoPlayTimeout: 5000,
     autoplayHoverPause: true
 
-})</script>
+});
+
+jQuery('[data-fancybox]').fancybox({
+    buttons: [
+        "zoom",
+        //"share",
+        "slideShow",
+        "fullScreen",
+        "download",
+        "thumbs",
+        "close"
+    ],
+    protect: true,
+    preventCaptionOverlap: true,
+});
+</script>
