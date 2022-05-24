@@ -23,7 +23,7 @@
 
 <div class="row">
    {% for gallery in site.gallery %}
-   <div class="col-md-{% bootstrapColWidth %}">
+   <div class="col-md-{{ bootstrapColWidth }}">
       <div class="thumbnail">
          <img src="{{gallery.image}}">
       </div>
