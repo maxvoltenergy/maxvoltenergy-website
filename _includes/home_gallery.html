@@ -13,7 +13,13 @@
    </div>
    {% endfor %}
 </div>
-
+<div class="owl-carousel owl-theme">
+   {% for gallery in site.gallery %}
+   <div class="slide" data-slide-index="{{ forloop.index0 }}">
+      <a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a>
+   </div>
+   {% endfor %}
+</div>
 <style>
 
 
