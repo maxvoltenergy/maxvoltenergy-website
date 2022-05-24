@@ -15,16 +15,24 @@
 </div>
 
 
-{% assign rowCount = 0 %}
 
-<div class="item">
+
+{% assign numOfCols = 4 %}
+{% assign rowCount = 0 %}
+{% assign bootstrapColWidth = 12/numOfCols %}
+
+<div class="row">
    {% for gallery in site.gallery %}
-   <a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a>
-   {{ increment rowCount }}
+   <div class="col-md-{% bootstrapColWidth %}">
+      <div class="thumbnail">
+         <img src="{{gallery.image}}">
+      </div>
+   </div>
+
+    {{ increment rowCount }}
 
    {% if rowCount | modulo: 2 == 0 %}
-
-</div><div class="item">
+</div><div class="row">
    {% endif %}
 
    {% endfor %}
