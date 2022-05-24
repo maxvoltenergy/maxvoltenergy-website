@@ -16,31 +16,24 @@
 
 
 
+{% for post in site.posts %}
 
-{% assign numOfCols = 4 %}
-{% assign rowCount = 0 %}
-{% assign bootstrapColWidth = 3 %}
+{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
 
+{% if modulo == '0' or forloop.first %}
 <div class="row">
-   {% for gallery in site.gallery %}
-   <div class="col-md-{{ bootstrapColWidth }}">
-      <div class="thumbnail">
-         <img src="{{gallery.image}}">
-      </div>
-   </div>
-
-    {% increment rowCount %}
-
-
-   {% capture modulo %}{{ rowCount | mod:4 }}{% endcapture %}
-
-   {{ modulo }}
-   {% if modulo == 0 %}
-</div><div class="row">
    {% endif %}
 
-   {% endfor %}
+   <!-- don't forget those pesky 'alpha' and 'omega' tags if they're in there -->
+   <div class="three-columns {{ cycle 'alpha', '', 'omega' }}">
+      ... POST STUFF ...
+   </div>
+
+   {% if modulo == '2' or forloop.last %}
 </div>
+{% endif %}
+
+{% endfor %}
 
 
 
