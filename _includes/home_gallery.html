@@ -1,39 +1,13 @@
 
 <div class="owl-carousel owl-theme">
-
-   <div class="item">{% for gallery in site.gallery limit: 2 %}
-      <a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a>
-   {% endfor %}
-   </div>
+   {% for gallery in site.gallery limit: 6 %}
    <div class="item">
-   {% for gallery in site.gallery limit: 2 offset: continue %}
       <a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a>
    {% endfor %}
    </div>
 
-
 </div>
 
-
-
-{% for post in site.posts %}
-
-{% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
-
-{% if modulo == '0' or forloop.first %}
-<div class="row">
-   {% endif %}
-
-   <!-- don't forget those pesky 'alpha' and 'omega' tags if they're in there -->
-   <div class="three-columns {{ cycle 'alpha', '', 'omega' }}">
-      ... POST STUFF ...
-   </div>
-
-   {% if modulo == '2' or forloop.last %}
-</div>
-{% endif %}
-
-{% endfor %}
 
 
 
