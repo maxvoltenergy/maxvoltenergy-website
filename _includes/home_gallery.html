@@ -19,7 +19,25 @@
 </div>
 
 
-
+<div class="posts">
+   {% for post in site.posts %}
+   {% assign remainder = forloop.index | modulo: 2 %}
+   {% if forloop.first == true %}
+   <div class="row">
+      <article class="twelve columns"></article>
+   </div>
+   {% elsif remainder == 0 %}
+   <div class="row">
+      <article class="six columns"></article>
+      {% if forloop.last %}
+   </div>
+   {% endif %}
+   {% else %}
+   <article class="six columns"></article>
+</div>
+{% endif %}
+{% endfor %}
+</div>
 
 <style>.owl-carousel .item {
    height: 25rem;
