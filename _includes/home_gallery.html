@@ -14,6 +14,23 @@
 
 </div>
 
+
+{% assign rowCount = 0 %}
+
+<div class="item">
+   {% for gallery in site.gallery %}
+   <a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a><a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a>
+   {% increment rowCount %}
+
+   {% rowCount % numOfCols == 0 %}
+</div><div class="item">
+   {% endif %}
+
+   {% endfor %}
+</div>
+
+
+
 <style>.owl-carousel .item {
    height: 25rem;
    background: #fff;
