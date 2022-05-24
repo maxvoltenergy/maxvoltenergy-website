@@ -6,8 +6,11 @@
 
    </div>
    {% endfor %}
-   {% for gallery in site.gallery limit: 12 %}
-   {% if forloop.index0 >= 6 %}
+   {% assign i = 0 %}
+
+   {% for gallery in site.gallery %}
+   {% assign i = i | plus:1 %}
+   {% if i > 6 %}
    <div class="item">
       <a data-fancybox="gallery" href="{{gallery.image}}" data-caption="{{gallery.title}}"><img class="imgsize" src="{{gallery.thumb}}" alt="{{gallery.title}}"></a>
 {% endif% }
