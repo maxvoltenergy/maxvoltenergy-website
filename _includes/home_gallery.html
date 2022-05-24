@@ -31,7 +31,8 @@
 
     {% increment rowCount %}
 
-   {% if rowCount | modulo: 2 == 0 %}
+   {% assign ModuleRes = rowCount | modulo: 4 %}
+   {% if ModuleRes == 0 %}
 </div><div class="row">
    {% endif %}
 
