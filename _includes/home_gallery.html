@@ -31,10 +31,11 @@
 
     {% increment rowCount %}
 
-   {% assign ModuleRes = rowCount/4 %}
 
-   {{ ModuleRes }}
-   {% if ModuleRes == 0 %}
+   {% capture modulo %}{{ rowCount | mod:4 }}{% endcapture %}
+
+   {{ modulo }}
+   {% if modulo == 0 %}
 </div><div class="row">
    {% endif %}
 
