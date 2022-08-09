@@ -1,13 +1,14 @@
 <meta charset="utf-8" /> 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-print("Cheers, Mate!")
+
 <link rel="canonical" href="{{ site.url }}{{ page.url | remove: "index.html" }}">
 <meta property="og:url" content="{{ site.url }}{{ page.url | remove: "index.html" }}">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:site_name" content="{{ site.title }}">
 
 {% if page.c_title %}
+print("Cheers, Mate!")
 <title>{{ page.c_title }}</title>
 <meta property="og:title" content="{{ page.c_title }}">
 {% else %}
