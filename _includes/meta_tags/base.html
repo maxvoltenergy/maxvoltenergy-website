@@ -11,12 +11,12 @@
 <title>{{ page.c_title }}</title>
 <meta property="og:title" content="{{ page.c_title }}">
 {% else %}
-<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+<!--<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>-->
 <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
 {% endif %}
 
 {% if page.description %}
-<meta name="description" content="{{ page.description }}">
+<!--<meta name="description" content="{{ page.description }}">-->
 <meta property="og:description" content="{{ page.description }}">
 
 {% elsif page.layout == "post" %}
