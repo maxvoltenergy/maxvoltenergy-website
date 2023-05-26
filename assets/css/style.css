@@ -460,6 +460,9 @@ color:#32C36C;
     transition: .5s;
     z-index: 1;
 }
+.owl-nav {
+display: none;
+}
 
 .testimonial-carousel:hover .owl-nav {
     width: 300px;
@@ -478,9 +481,7 @@ color:#32C36C;
 .testimonial-carousel .owl-nav .owl-next:hover {
     color: var(--dark);
 }
-.owl-nav{
-    display:none;
-}
+
 
 .testimonial-carousel .testimonial-img img {
     width: 100px;
