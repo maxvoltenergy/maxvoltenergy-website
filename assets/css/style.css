@@ -478,6 +478,9 @@ color:#32C36C;
 .testimonial-carousel .owl-nav .owl-next:hover {
     color: var(--dark);
 }
+.owl-nav{
+    display:none;
+}
 
 .testimonial-carousel .testimonial-img img {
     width: 100px;
