@@ -103,6 +103,10 @@
     color: var(--primary);
 }
 
+.dropdown-menu a:hover{
+color:#32C36C;
+}
+
 .navbar .dropdown-toggle::after {
     border: none;
     content: "\f107";
