@@ -454,15 +454,13 @@ color:#32C36C;
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
+    display: none;
     justify-content: space-between;
     opacity: 0;
     transition: .5s;
     z-index: 1;
 }
-.owl-nav {
-display: none;
-}
+
 
 .testimonial-carousel:hover .owl-nav {
     width: 300px;
