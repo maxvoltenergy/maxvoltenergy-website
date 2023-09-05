@@ -2,7 +2,7 @@
 
 backend:
   name: git-gateway
-  repo: maxvoltenergy/maxvoltenergy-website
+  repo: Maxvoltenergy Private Limited/Maxvoltenergy Private Limited-website
   branch: main
 media_folder: 'assets/uploads'
 collections:
