@@ -2,174 +2,192 @@
 
 backend:
   name: git-gateway
-  repo: Maxvoltenergy Private Limited/Maxvoltenergy Private Limited-website
+  repo: maxvoltenergy/maxvoltenergy-website
   branch: main
-media_folder: 'assets/uploads'
+media_folder: "assets/uploads"
 collections:
-    - name: 'blog'
-      label: 'Blog'
-      folder: '_posts/'
-      create: true
-      slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-      editor:
-        preview: false
-      fields:
-        - label: 'Layout'
-          name: 'layout' 
-          widget: 'hidden'
-          default: 'post'
-        - label: 'Title'
-          name: 'title'
-          widget: 'string'
-        - label: 'Publish Date'
-          name: 'date'
-          widget: 'datetime'
-        - label: 'Categories'
-          name: 'categories'
-          multiple: true
-          widget: "relation"
-          collection: "blogoptions"
-          file: "categories"
-          search_fields: ["categories.*.title"]
-          display_fields: ["categories.*.title"]
-          value_field: "categories.*.title"
-        - label: 'Tags'
-          name: 'tags'
-          multiple: true
-          widget: "relation"
-          collection: "blogoptions"
-          file: "tags"
-          search_fields: ["tags.*.title"]
-          display_fields: ["tags.*.title"]
-          value_field: "tags.*.title"
-        - label: 'Author'
-          name: 'author'
-          widget: 'relation'
-          collection: 'author'
-          display_fields: [display_name]
-          search_fields: [display_name]
-          value_field: 'name'
-        - label: 'Body'
-          name: 'body'
-          widget: 'markdown'
-        - label: 'Post image'
-          name: 'image'
-          widget: 'image'
-          
-    - name: 'blogoptions'
-      label: 'Blog Options'
-      delete: false # Prevent users from deleting documents in this collection
-      editor:
-        preview: false
-      files:
-        - name: 'categories'
-          label: 'Categories'
-          file: '_data/categories.yml'
-          description: 'List of categories'
-          fields:
-            - name: 'categories'
-              label: 'Categories'
-              label_singular: 'Category'
-              widget: list
-              fields:
-                - { label: 'Title', name: 'title', widget: 'string', hint: 'Enter title' }
-                - { label: 'Description', name: 'description', widget: 'markdown' }
-        - name: 'tags'
-          label: 'Tags'
-          file: '_data/tags.yml'
-          description: 'List of tags'
-          fields:
-            - name: 'tags'
-              label: 'Tags'
-              label_singular: 'Tag'
-              widget: list
-              fields:
-                - { label: 'Title', name: 'title', widget: 'string', hint: 'Enter title' }
-                - { label: 'Description', name: 'description', widget: 'markdown' } 
-      
-    - name: 'author'
-      label: 'Authors'
-      folder: '_author/'
-      create: true
-      slug: '{{year}}-{{month}}-{{day}}-{{name}}'
-      editor:
-        preview: false
-      fields:
-        - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'author' }
-        - { label: 'Short Name', name: 'name', widget: 'string' }
-        - { label: 'Display Name', name: 'display_name', widget: 'string' }
-        - { label: 'Position', name: 'position', widget: 'string' }
-        - { label: 'Body', name: 'body', widget: 'markdown' }
-    - name: 'gallery'
-      label: 'Gallery'
-      folder: '_gallery/'
-      create: true
-      slug: '{{year}}-{{month}}-{{day}}-{{title}}'
-      editor:
-        preview: false
-      fields:
-        - label: 'Layout'
-          name: 'layout'
-          widget: 'hidden'
-          default: 'gallery'
-        - label: 'Title'
-          name: 'title'
-          widget: 'string'
-        - label: 'Thumbnail 600px-400Px'
-          name: 'thumb'
-          widget: 'image'
-        - label: 'Image'
-          name: 'image'
-          widget: 'image'    
-    - name: 'service'
-      label: 'Service Center'
-      folder: '_service/'
-      create: true
-      slug: '{{year}}-{{month}}-{{day}}-{{title}}'
-      editor:
-        preview: false
-      fields:
-        - label: 'Layout'
-          name: 'layout'
-          widget: 'hidden'
-          default: 'service'
-        - label: 'Title'
-          name: 'title'
-          widget: 'string'
-        - label: 'Address'
-          name: 'address'
-          widget: 'string'
-        - label: 'Phone'
-          name: 'phone'
-          widget: 'string'
-        - label: 'latitude'
-          name: 'latitude'
-          widget: 'string'
-        - label: 'longitude'
-          name: 'longitude'
-          widget: 'string'
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts/"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "post"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Categories"
+        name: "categories"
+        multiple: true
+        widget: "relation"
+        collection: "blogoptions"
+        file: "categories"
+        search_fields: ["categories.*.title"]
+        display_fields: ["categories.*.title"]
+        value_field: "categories.*.title"
+      - label: "Tags"
+        name: "tags"
+        multiple: true
+        widget: "relation"
+        collection: "blogoptions"
+        file: "tags"
+        search_fields: ["tags.*.title"]
+        display_fields: ["tags.*.title"]
+        value_field: "tags.*.title"
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "author"
+        display_fields: [display_name]
+        search_fields: [display_name]
+        value_field: "name"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+      - label: "Post image"
+        name: "image"
+        widget: "image"
 
-    - name: 'testimonial'
-      label: 'Testimonials'
-      folder: '_testimonial/'
-      create: true
-      slug: '{{year}}-{{month}}-{{day}}-{{name}}'
-      editor:
-        preview: false
-      fields:
-        - label: 'Layout'
-          name: 'layout'
-          widget: 'hidden'
-          default: 'testimonial'
-        - label: 'Full Name'
-          name: 'name'
-          widget: 'string'
-        - label: 'Detail'
-          name: 'detail'
-          widget: 'string'
-        - label: 'Testimonial'
-          name: 'body'
-          widget: 'markdown'
-        - label: 'Profile Photo'
-          name: 'image'
-          widget: 'image'
+  - name: "blogoptions"
+    label: "Blog Options"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: "categories"
+        label: "Categories"
+        file: "_data/categories.yml"
+        description: "List of categories"
+        fields:
+          - name: "categories"
+            label: "Categories"
+            label_singular: "Category"
+            widget: list
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  hint: "Enter title",
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "markdown",
+                }
+      - name: "tags"
+        label: "Tags"
+        file: "_data/tags.yml"
+        description: "List of tags"
+        fields:
+          - name: "tags"
+            label: "Tags"
+            label_singular: "Tag"
+            widget: list
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "string",
+                  hint: "Enter title",
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "markdown",
+                }
+
+  - name: "author"
+    label: "Authors"
+    folder: "_author/"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{name}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "author" }
+      - { label: "Short Name", name: "name", widget: "string" }
+      - { label: "Display Name", name: "display_name", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "gallery"
+    label: "Gallery"
+    folder: "_gallery/"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{title}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "gallery"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Thumbnail 600px-400Px"
+        name: "thumb"
+        widget: "image"
+      - label: "Image"
+        name: "image"
+        widget: "image"
+  - name: "service"
+    label: "Service Center"
+    folder: "_service/"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{title}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "service"
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Address"
+        name: "address"
+        widget: "string"
+      - label: "Phone"
+        name: "phone"
+        widget: "string"
+      - label: "latitude"
+        name: "latitude"
+        widget: "string"
+      - label: "longitude"
+        name: "longitude"
+        widget: "string"
+
+  - name: "testimonial"
+    label: "Testimonials"
+    folder: "_testimonial/"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{name}}"
+    editor:
+      preview: false
+    fields:
+      - label: "Layout"
+        name: "layout"
+        widget: "hidden"
+        default: "testimonial"
+      - label: "Full Name"
+        name: "name"
+        widget: "string"
+      - label: "Detail"
+        name: "detail"
+        widget: "string"
+      - label: "Testimonial"
+        name: "body"
+        widget: "markdown"
+      - label: "Profile Photo"
+        name: "image"
+        widget: "image"
